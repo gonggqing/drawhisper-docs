@@ -2,46 +2,34 @@
 sidebar_position: 1
 ---
 
-# Tutorial Intro
+# Drawhisper Creator Book
 
-Let's discover **Docusaurus in less than 5 minutes**.
+**Welcome to Drawhisper, where creativity meets AI and inspiration begins** ❤️. Whether you’re an artist, animator, or storyteller, this guide will walk you through the essential steps to begin your journey as a creator on the platform.
+
+Step into a world of characters created by our community. If you’re ready to extend your favoriate character's story or bring your own OC (original character) to life, this guide will lead the way.
 
 ## Getting Started
+#### *Character*
+Drawhisper offers a suite of creation tools designed to **empower and inspire creators** on their journey. Begin by crafting your character — **a spark of imagination brought to life in moments**. Prompting its background stories, creating its appearence via [Creator Center](./intro.md) instantly powered by AI. Once created, you can review or edit your character in **personal home**, ready to grow through the stories you design.
+#### *Scene and Animation*
+From there, the Creator Tools open the door to **worldbuilding**. Compose new **scenes** that expand your character’s journey, inheriting their core essence while branching into new narratives. For animation, we support both **Spine** and **Live2D** — two expressive styles that bring **movements** and **emotions** to your characters. You can explore their unique qualities in the [Animation Creation](./tutorial-basics/congratulations.md) section.
+#### *Anime Flow*
+Once your characters and animations are in place, [Anime Flow](./intro.md) lets you orchestrate their story and personality — **shaping how they feel, move, and speak**. This visual flow editor, powered by advanced AI, breathes soul into your creation, crafting deeply interactive and emotionally resonant experiences.
+#### *Voice*
+And if voice is part of your vision, the [Voice Creation](./intro.md) makes it possible to replicate your voice — or evoke another — using just **a few seconds of audio and reference text**. It’s a bridge between expression and presence, allowing your creations to speak, whisper, and connect like never before.
 
-Get started by **creating a new site**.
+## Attributes to define the chracter
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+In drawhisper, every character’s interaction is shaped by a blend of **creative elements** and **user dynamics**. There are three core components that guide how a character **feels, responds, and behaves**:
+- Character Profile
+The character’s soul — including their name, description, avatar, background story, greeting, and seed chat — forms their **tone, personality, and initial intent**.
+- Scene Settings 
+Each scene sets the **emotional stage** — with its own avatar and introduction — influencing the **atmosphere** and **context** of interactions.
+- User Persona
+The user’s role in the story — a default or **custom identity** that defines how the character sees and engages with them.
 
-### What you'll need
+These three elements weave together to shape the soul of a character — guiding how they **speak, feel, and connect**. Though scene settings and user personas are optional, they lend nuance and shade to the tapestry of interaction. As story **unfold and voices intertwine**, your character evolves — guided not just by design, but by the **shifting context of every interaction**.
 
-- [Node.js](https://nodejs.org/en/download/) version 18.0 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+## Wha's Next?
 
-## Generate a new site
-
-Generate a new Docusaurus site using the **classic template**.
-
-The classic template will automatically be added to your project after you run the command:
-
-```bash
-npm init docusaurus@latest my-website classic
-```
-
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
-
-The command also installs all necessary dependencies you need to run Docusaurus.
-
-## Start your site
-
-Run the development server:
-
-```bash
-cd my-website
-npm run start
-```
-
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
-
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+Ready to start creating a new character or trying to get familiar with animation types? 
