@@ -1,0 +1,10 @@
+{
+  "label": "API",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "title": "Drawhisper API",
+    "slug": "/development/api",
+    "description": "Learn how to integrate with the Drawhisper platform using our REST and webhook endpoints."
+  }
+}

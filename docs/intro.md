@@ -1,5 +1,8 @@
 ---
 sidebar_position: 1
+sidebar_label: Get Started
+title: Get Started with Drawhisper
+description: Orient yourself before diving into characters, posts, GenAI, and subscriptions.
 ---
 
 # Drawhisper Creator Book
@@ -12,11 +15,11 @@ Step into a world of characters created by our community. If you’re ready to e
 #### *Character*
 Drawhisper offers a suite of creation tools designed to **empower and inspire creators** on their journey. Begin by crafting your character — **a spark of imagination brought to life in moments**. Prompting its background stories, creating its appearence via [Creator Center](./intro.md) instantly powered by AI. Once created, you can review or edit your character in **personal home**, ready to grow through the stories you design.
 #### *Scene and Animation*
-From there, the Creator Tools open the door to **worldbuilding**. Compose new **scenes** that expand your character’s journey, inheriting their core essence while branching into new narratives. For animation, we support both **Spine** and **Live2D** — two expressive styles that bring **movements** and **emotions** to your characters. You can explore their unique qualities in the [Animation Creation](./tutorial-basics/congratulations.md) section.
+From there, the Creator Tools open the door to **worldbuilding**. Compose new **scenes** that expand your character’s journey, inheriting their core essence while branching into new narratives. For animation, we support both **Spine** and **Live2D** — two expressive styles that bring **movements** and **emotions** to your characters. You can explore their unique qualities in the [Animation Creation](./character-basics/animation-ready-assets.md) section.
 #### *Anime Flow*
-Once your characters and animations are in place, [Anime Flow](./intro.md) lets you orchestrate their story and personality — **shaping how they feel, move, and speak**. This visual flow editor, powered by advanced AI, breathes soul into your creation, crafting deeply interactive and emotionally resonant experiences.
+Once your characters and animations are in place, [Anime Flow](./character-basics/animation-ready-assets.md) lets you orchestrate their story and personality — **shaping how they feel, move, and speak**. This visual flow editor, powered by advanced AI, breathes soul into your creation, crafting deeply interactive and emotionally resonant experiences.
 #### *Voice*
-And if voice is part of your vision, the [Voice Creation](./intro.md) makes it possible to replicate your voice — or evoke another — using just **a few seconds of audio and reference text**. It’s a bridge between expression and presence, allowing your creations to speak, whisper, and connect like never before.
+And if voice is part of your vision, the [Voice Creation](./character-basics/appearance-variations.md) makes it possible to replicate your voice — or evoke another — using just **a few seconds of audio and reference text**. It’s a bridge between expression and presence, allowing your creations to speak, whisper, and connect like never before.
 
 ## Attributes to define the chracter
 

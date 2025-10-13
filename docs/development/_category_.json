@@ -1,0 +1,10 @@
+{
+  "label": "Development",
+  "position": 40,
+  "link": {
+    "type": "generated-index",
+    "slug": "/docs/development",
+    "title": "Development",
+    "description": "Get oriented with Drawhisper developer tooling, architecture, and API guides."
+  }
+}

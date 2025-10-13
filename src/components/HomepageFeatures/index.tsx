@@ -1,68 +1,75 @@
 import type {ReactNode} from 'react';
 import clsx from 'clsx';
+import Link from '@docusaurus/Link';
 import Heading from '@theme/Heading';
 import styles from './styles.module.css';
 
 type FeatureItem = {
   title: string;
-  Svg: React.ComponentType<React.ComponentProps<'svg'>>;
   description: ReactNode;
+  to: string;
+  badge?: string;
 };
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: 'Launch the Tutorial',
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Learn the Drawhisper basics in minutes and build confidence with the
+        guided creator tutorial.
       </>
     ),
+    to: '/docs/intro',
+    badge: 'Start here',
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: 'Catch up on Stories',
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Explore releases, behind-the-scenes notes, and inspiration from the team
+        and community.
       </>
     ),
+    to: '/blog',
+    badge: 'What’s new',
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: 'Explore the API',
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Authenticate, manage projects, and react to webhooks with the
+        Drawhisper API cookbook.
       </>
     ),
+    to: '/docs/development/api',
+    badge: 'For builders',
   },
 ];
 
-function Feature({title, Svg, description}: FeatureItem) {
+function FeatureCard({title, description, to, badge}: FeatureItem) {
   return (
-    <div className={clsx('col col--4')}>
-      <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
-      </div>
-      <div className="text--center padding-horiz--md">
-        <Heading as="h3">{title}</Heading>
-        <p>{description}</p>
-      </div>
-    </div>
+    <Link className={styles.featureCard} to={to}>
+      {badge ? <span className={styles.featureBadge}>{badge}</span> : null}
+      <Heading as="h3" className={styles.cardTitle}>
+        {title}
+      </Heading>
+      <p className={styles.cardDescription}>{description}</p>
+      <span className={styles.cardAction}>
+        Go to {title}
+        <span aria-hidden="true"> →</span>
+      </span>
+    </Link>
   );
 }
 
 export default function HomepageFeatures(): ReactNode {
   return (
     <section className={styles.features}>
-      <div className="container">
-        <div className="row">
-          {FeatureList.map((props, idx) => (
-            <Feature key={idx} {...props} />
+      <div className={clsx('container', styles.featuresContainer)}>
+        <div className={styles.featuresGrid}>
+          {FeatureList.map(item => (
+            <FeatureCard key={item.title} {...item} />
           ))}
         </div>
       </div>
