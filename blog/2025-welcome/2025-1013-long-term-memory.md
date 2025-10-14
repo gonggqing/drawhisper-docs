@@ -21,11 +21,12 @@ Context loss across chat histories can be addressed with similar techniques, but
 ## Context Engineering in Drawhisper
 With that foundation, we designed a long-term memory system tailored for Drawhisper role-play chat experience. It automatically creates readable memories as users talk to their favorite characters, helping them form deeper bonds over time.
 
-In general, the agent generates one to three memories when the chat history exceeds 2,048 tokens (roughly 20 chat rounds, or 40 individual messages). First, it summarizes the recent dialogue with a reasoning model (deepseek-reasoner in our deployment). That summary flows to an extractor model, which splits the content into structured chunks. Each chunk is expressed in JSON and includes a title, body content, and type. We currently support seven memory types, including **conversation**, **important event**, **preference**, **fact**, **emotion**, **worldbuilding**, and **relationship**—, the extractor assigns the best fit during generation.
+In general, the agent generates one to three memories when the chat history exceeds 2,048 tokens (roughly 20 chat rounds, or 40 individual messages). First, it summarizes the recent dialogue with a reasoning model (deepseek-reasoner in our deployment). That summary flows to an extractor model, which splits the content into structured chunks. Each chunk is expressed in JSON and includes a title, body content, and type. We currently support seven memory types, including **conversation**, **important event**, **preference**, **fact**, **emotion**, **worldbuilding**, and **relationship**, the extractor assigns the best fit during generation.
 
-Next, the agent embeds each chunk and stores the resulting vectors, along with metadata such as the source transcript and character information, in AWS S3 Vectors. After the embeddings are safely written, the agent persists the memory and vector index in our database so the chat client can display, edit, or reuse it.
+Next, the agent embeds each chunk and stores the resulting vectors, along with metadata such as the source transcript and character information, in a vector storage. After the embeddings are safely written, the agent persists the memory and vector index in our database so the chat client can display, edit, or reuse it.
 
 ```js
+// an example memory chunk
 let memory_chunk = {
     title: 'memory title',
     content: 'memory content ...',
@@ -35,13 +36,15 @@ let memory_chunk = {
 
 To summarize, the Memory Agent runs through five stages:
 
-- Generate a targeted summary of the recent chat history
+- Generate a detailed summary of the recent chat history
 - Extract memory chunks and assign the best-fit type
 - Embed the source content for each chunk
 - Persist embeddings to the vector store and record the memory in our database
 - Notify the chat client about new memories
 
-We orchestrate the first two stages with LangChain.js agent chain, turning raw dialogue into structured, human-readable snippets. For vector storage and retrieval we rely on [AWS S3 Vectors](https://docs.aws.amazon.com/zh_cn/AmazonS3/latest/userguide/s3-vectors.html), which gives us durable storage and low-latency similarity search. Everything runs asynchronously in the background, so the user experience stays smooth.
+[![Memory System Flow](./memory-system.png)](./memory-system.png)
+
+We orchestrate the first two stages with [LangChain.js](https://docs.langchain.com/oss/javascript/langchain/overview) agent chain, turning raw dialogue into structured, user-friendly memory snippets. For vector storage and retrieval we rely on [AWS S3 Vectors](https://docs.aws.amazon.com/AmazonS3/latest/userguide/s3-vectors.html), which gives us durable storage and low-latency similarity search. Everything runs asynchronously in the background, so the user experience stays smooth.
 
 Inside the chat client, users can *pin* memories to the current thread or *share* them across multiple chats derived from the same character. To expand each character's verisimilitude and versatility, we also support user-created scenes. Scenes inherit the core character configuration but add detailed stage directions and scenario information, enriching the context provided to the model.
 
