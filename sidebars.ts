@@ -20,9 +20,12 @@ const sidebars: SidebarsConfig = {
       label: 'Character Basics',
       link: {type: 'doc', id: 'character-basics/index'},
       items: [
-        'character-basics/signature-profile',
-        'character-basics/appearance-variations',
-        'character-basics/animation-ready-assets',
+        'character-basics/create-a-character',
+        'character-basics/design-a-scene',
+        'character-basics/pick-a-voice',
+        'character-basics/draw-animations',
+        'character-basics/assemble-a-flow',
+        'character-basics/view-in-chat',
       ],
     },
     {
